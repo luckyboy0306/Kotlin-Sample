@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="serverVM"
+                type="com.example.kotlin_sample.fragment.model.ServerFragmentVM"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+                    android:paddingTop="40dp"
+                    android:background="@drawable/shape_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.google.android.material.tabs.TabLayout
+                        app:tabMode="scrollable"
+                        app:tabIndicatorFullWidth="true"
+                        android:background="@color/white"
+                        android:id="@+id/server_f_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/server_f_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>
